@@ -1,0 +1,9 @@
+.joinpage {
+  height: 89.6vh;
+}
+
+.joinpage .video-div video {
+  width: 70%;
+  height: 70%;
+  border-radius: 20%;
+}
