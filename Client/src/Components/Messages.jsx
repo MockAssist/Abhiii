@@ -30,22 +30,30 @@ const Messages = () => {
   }, [messages, showChatBox]);
 
   useEffect(() => {
-    socket.on("recieve-message", (data) => {
+    const handleMessageReceive = (data) => {
       setMessages((messages) => [...messages, data]);
       notification.open({
         message: `New Message`,
         description: data.text,
         icon: <MessageOutlined style={{ color: "#108ee9" }} />,
       });
-    });
-  }, []);
+    };
+
+    // Attach the event listener
+    socket.on("recieve-message", handleMessageReceive);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      socket.off("recieve-message", handleMessageReceive);
+    };
+  }, [socket]);
 
   const sendMessage = () => {
     if (newMessage.trim().length <= 0) {
       message.error("Enter some message");
       return;
     }
-
+    console.log(newMessage);
     let tempMessage = { text: newMessage.trim(), user: me };
     socket.emit("send-message", {
       data: tempMessage,

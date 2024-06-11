@@ -89,7 +89,7 @@ const Meet = (props) => {
     const delta = quill.getContents();
     const pdfAsBlob = await pdfExporter.generatePdf(delta);
     message.success("Downloading your whiteboard");
-    saveAs(pdfAsBlob, `Merge-whiteboard.pdf`);
+    saveAs(pdfAsBlob, `Interview.pdf`);
   };
 
   if (loading) {
