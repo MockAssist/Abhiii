@@ -4,9 +4,6 @@ import CopyToClipboard from "react-copy-to-clipboard";
 //import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import "../Styles/Options.css";
-// import "../Styles/Options.css";
-//import "antd/dist/antd.css";
-//import MenuIcon from '@mui/icons-material/Menu';
 import Menu from "@mui/material/Menu";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import VideocamOffIcon from "@mui/icons-material/VideocamOff";
@@ -100,7 +97,9 @@ const Options = (props) => {
             {myVideoStatus ? "Turn off video" : "Turn on video"}
           </span>
         </button>
+
         {/* {callAccepted && !callEnded && ( */}
+
         <button
           className="red-btn tooltip"
           type="primary"
@@ -113,6 +112,7 @@ const Options = (props) => {
         </button>
 
         {/* )} */}
+
         <button
           onClick={() => updateMicStatus()}
           type="primary"
@@ -124,6 +124,7 @@ const Options = (props) => {
             {myMicStatus ? "Turn off mic" : "Turn on mic"}
           </span>
         </button>
+
         <button
           className="tooltip"
           type="primary"
@@ -149,7 +150,9 @@ const Options = (props) => {
                 <CloseIcon />
               </button>
             </div>
-            <h3 className="name">Hi, {name}</h3>
+            <h3 className="name">
+              <span className="bg-black font-bold text-white">Hi, {name}</span>
+            </h3>
             <div>
               <input
                 type="text"
@@ -164,7 +167,7 @@ const Options = (props) => {
                   message.success("Url Copied");
                 }}
               >
-                <Button type="primary">Copy Link</Button>
+                <Button type="primary  bg-[#7E30E1]">Copy Link</Button>
               </CopyToClipboard>
               <h3 style={{ padding: "10px 0 0px 0" }}>Or</h3>
               <CopyToClipboard
@@ -173,7 +176,7 @@ const Options = (props) => {
                   message.success("Id Copied");
                 }}
               >
-                <Button type="primary">Copy ID</Button>
+                <Button type="primary  bg-[#7E30E1]">Copy ID</Button>
               </CopyToClipboard>
             </div>
 
@@ -235,6 +238,7 @@ const Options = (props) => {
                 <p>{call.callerName} wants to join with you</p>
                 <div className="flex">
                   <Button
+                    className=" bg-[#7E30E1]"
                     type="primary"
                     onClick={() => {
                       answerCall();
@@ -244,6 +248,7 @@ const Options = (props) => {
                     Accept
                   </Button>
                   <Button
+                    className="bg-[#7E30E1]"
                     type="primary"
                     onClick={() => {
                       endCall();

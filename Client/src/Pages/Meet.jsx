@@ -114,26 +114,24 @@ const Meet = (props) => {
           <div
             className={callAccepted ? "video-frames " : "video-frames v-size"}
           >
-            <div className="video-frame">
+            <div className="video-frame w-full">
               {stream ? (
                 <>
                   {myMicStatus ? <MicIcon /> : <MicOffIcon />}
                   {myVideoStatus ? (
                     <video
-                      width="250"
-                      height="140"
-                      className="video-ref"
+                      className="video-ref rounded-lg"
                       src=""
                       ref={myVideo}
                       autoPlay
                       muted
                     ></video>
                   ) : (
-                    <div className="video-ref img-bg">
+                    <div className="video-ref img-bg w-full  border border-gray-300">
                       <img src={homeIcon1} />
                     </div>
                   )}
-                  <div className="name">{name} (you)</div>
+                  <div className="name bg-black text-white">{name} (you)</div>
                 </>
               ) : (
                 <Spinner />
@@ -148,7 +146,7 @@ const Meet = (props) => {
                     width="250"
                     height="140"
                     src=""
-                    className="video-ref"
+                    className="video-ref rounded-lg"
                     ref={userVideo}
                     autoPlay
                     // muted
@@ -158,7 +156,7 @@ const Meet = (props) => {
                     <img src={homeIcon1} />
                   </div>
                 )}
-                <div className="name">{otherUserName}</div>
+                <div className="name bg-black text-white">{otherUserName}</div>
               </div>
             )}
           </div>

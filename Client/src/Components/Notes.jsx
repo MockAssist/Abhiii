@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import GetAppIcon from "@mui/icons-material/GetApp";
 import { jsPDF } from "jspdf";
 import "../Styles/Notes.css";
+import Tooltip from "@mui/material/Tooltip";
 
 const Notes = () => {
   const { notes, setNotes } = useContext(SocketContext);
