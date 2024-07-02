@@ -6,6 +6,7 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Join from "./Pages/Join";
 import Meet from "./Pages/Meet";
+import AI from "./Pages/AI";
 import { ContextProvider } from "./SocketContext";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/join" element={<Join />} />
           <Route path="/meet" element={<Meet />} />
           <Route path="/about" element={<About />} />
+          <Route path="/ai" element={<AI />} />
         </Routes>
       </Router>
     </ContextProvider>
