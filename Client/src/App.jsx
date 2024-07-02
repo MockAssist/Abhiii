@@ -2,7 +2,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./Pages/About";
+import Github from "./Pages/Github";
 import Home from "./Pages/Home";
 import Join from "./Pages/Join";
 import Meet from "./Pages/Meet";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/join" element={<Join />} />
           <Route path="/meet" element={<Meet />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/github" element={<Github />} />
           <Route path="/ai" element={<AI />} />
         </Routes>
       </Router>
