@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { SocketContext } from "../SocketContext";
 import CopyToClipboard from "react-copy-to-clipboard";
 //import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 import "../Styles/Options.css";
 import Menu from "@mui/material/Menu";
@@ -24,6 +25,7 @@ import { APP_URL } from "../Constant";
 
 const Options = (props) => {
   const [callId, setCallId] = useState("");
+  const navigate = useNavigate();
 
   const {
     me,

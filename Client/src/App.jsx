@@ -15,8 +15,8 @@ function App() {
   }, []);
 
   return (
-    <ContextProvider>
-      <Router>
+    <Router>
+      <ContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/join" element={<Join />} />
@@ -24,8 +24,8 @@ function App() {
           <Route path="/github" element={<Github />} />
           <Route path="/ai" element={<AI />} />
         </Routes>
-      </Router>
-    </ContextProvider>
+      </ContextProvider>
+    </Router>
   );
 }
 

@@ -1,18 +1,21 @@
+// Example: src/components/ChatbotIframe.js
 import React from "react";
 import Navbar from "../Components/Navbar";
-import Controller from "../Components/Controller";
-function AI() {
+const chatBot = () => {
   return (
     <>
-      <div className="container">
-        <Navbar />
-        <Controller />
-        <div className="stepcontainer">
-          <h1>AI page</h1>
-        </div>
+      <Navbar />
+      <div className="chatbot-container">
+        <iframe
+          src="https://cleverchatter.vercel.app/" // Replace with your deployed chatbot URL
+          title="Chatbot"
+          width="100%"
+          height="700px"
+          style={{ border: "none" }}
+        />
       </div>
     </>
   );
-}
+};
 
-export default AI;
+export default chatBot;
